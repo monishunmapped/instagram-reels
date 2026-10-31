@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Save Instagram media you own or are authorized to download.">
+  <title>InstaSave Studio</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="InstaSave Studio home"><span class="brand-mark">↓</span><span>instasave<span class="muted">.studio</span></span></a>
+      <span class="privacy"><i></i> Private by design</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">MEDIA DOWNLOADER <span>•</span> PWA</div>
+      <h1>Your media.<br><em>Your quality.</em></h1>
+      <p class="sub">Save photos, videos, Reels and carousel posts you own or have permission to download — without leaving this app.</p>
+
+      <div class="download-card">
+        <label for="urlInput">Instagram link</label>
+        <div class="input-row">
+          <input id="urlInput" type="url" inputmode="url" autocomplete="url" placeholder="https://www.instagram.com/reel/..." spellcheck="false">
+          <button id="pasteBtn" class="paste-btn" type="button">Paste</button>
+        </div>
+        <button id="downloadBtn" class="primary" type="button"><span>Get media</span><b>↗</b></button>
+        <div class="micro"><span class="lock">⌑</span> No login details requested · No media stored by this app</div>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="share-hint"><span class="share-icon">↗</span><div><strong>On Android?</strong><br>Tap <b>Share</b> on an Instagram post and choose <b>InstaSave Studio</b>.</div></div>
+    </section>
+
+    <section id="resultsSection" class="results hidden">
+      <div class="section-head"><div><div class="eyebrow">READY TO SAVE</div><h2>Your media</h2></div><button id="clearBtn" class="text-btn">Clear</button></div>
+      <div id="results" class="result-list"></div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><span>◈</span><h3>Source quality</h3><p>Requests the maximum available source quality. No extra compression or upscaling.</p></div>
+      <div class="feature"><span>↗</span><h3>Share to save</h3><p>Receive links from Instagram's Android share sheet when installed as a PWA.</p></div>
+      <div class="feature"><span>▣</span><h3>Installable</h3><p>Add it to your home screen. Works as a standalone app on supported browsers.</p></div>
+    </section>
+
+    <footer><span>INSTA<span class="muted">SAVE</span> STUDIO</span><span>Use responsibly. Respect creators and copyright.</span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
